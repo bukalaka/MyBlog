@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>博客详情</title>
+		<link rel="stylesheet" href="../static/dist/semantic.css" />
+		<link rel="stylesheet" href="../static/dist/components/reset.css">
+		<link rel="stylesheet" type="text/css" href="../static/dist/components/reset.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/site.css">
+	
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/container.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/grid.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/header.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/image.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/menu.css">
+	
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/divider.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/segment.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/form.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/input.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/button.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/list.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/message.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/icon.css">
+		<link rel="stylesheet" href="../static/css/me.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/typo.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="static/lib/prism/prism.css"/>
+		<link rel="stylesheet" type="text/css" href="static/lib/tocbot/tocbot.css"/>
+		
+		<script src="../static/js/jquery-3.4.1.min.js"></script>
+		<script src="../static/dist/semantic.js"></script>
+		<script src="../static/dist/components/form.js"></script>
+		<script src="../static/dist/components/transition.js"></script>
+		<script src="static/lib/prism/prism.js"></script>
+		<script src="static/lib/tocbot/tocbot.min.js"></script>
+	</head>
+
+	<body>
+		<!-- 导航 -->
+		<nav class="ui inverted attached segment m-padded-tb-mini">
+			<div class="ui container">
+				<div class="ui inverted secondary stackable menu">
+					<h2 class="ui teal header item">Blog</h2>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini clone icon"></i>归档</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
+					<div class="right m-item item  m-mobile-hide">
+						<div class="ui icon input">
+							<!-- transparent inverted -->
+							<input type="text" placeholder="Search...." />
+							<i class="search link icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+				<i class="sidebar icon"></i>
+			</a>
+		</nav>
+
+		<!-- 中间内容 -->
+		<div class="m-contauner m-padded-tb-large animated jackInTheBox">
+			<div class="ui container">
+				<div class="ui top attached segment">
+					<div class="ui horizontal link list">
+						<div class="item">
+							<img src="../static/img/icon_1.jpg" class="ui avatar image" />
+							<div class="content">
+								<a href="#" class="header">石登辉</a>
+							</div>
+						</div>
+						<div class="item">
+							<i class="calendar icon"></i> 2019-11-21
+						</div>
+						<div class="item">
+							<i class="eye icon"></i> 2048
+						</div>
+					</div>
+				</div>
+				<div class="ui attached segment">
+					<!-- 图片区域 -->
+					<img src="https://picsum.photos/id/1001/800/450" class="ui rounded fluid image" />
+				</div>
+				<div class="ui attached padded segment">
+					<!-- 内容 -->
+					<div class="ui right aligned basic segment">
+						<div class="ui orange basic label">原创</div>
+					</div>
+					<!-- 标题 -->
+					<h2 class="ui center aligned header">JSP九大内置对象和其作用</h2>
+					<br />
+					<!-- 博客内容 -->
+					<div id="content" class="typo js-toc-content typo-selection m-padded-lr-responsive m-padded-tb-large">
+						<p>JSP中一共预先定义了9个这样的对象，分别为：request、response、session、application、out、pagecontext、config、page、exception</p>
+						<h2>1、request对象</h2>
+						<p>request 对象是 javax.servlet.httpServletRequest类型的对象。 该对象代表了客户端的请求信息，主要用于接受通过HTTP协议传送到服务器的数据。（包括头信息、系统信息、请求方式以及请求参数等）。request对象的作用域为一次请求。</p>
+						<p></p>
+						<h2>2、response对象</h2>
+						<p>response 代表的是对客户端的响应，主要是将JSP容器处理过的对象传回到客户端。response对象也具有作用域，它只在JSP页面内有效。</p>
+						<p></p>
+						<h2>3、session对象</h2>
+						<p>session 对象是由服务器自动创建的与用户请求相关的对象。服务器为每个用户都生成一个session对象，用于保存该用户的信息，跟踪用户的操作状态。session对象内部使用Map类来保存数据，因此保存数据的格式为 “Key/value”。 session对象的value可以使复杂的对象类型，而不仅仅局限于字符串类型。</p>
+						<p></p>
+						<h2>4、application对象</h2>
+						<p>application 对象可将信息保存在服务器中，直到服务器关闭，否则application对象中保存的信息会在整个应用中都有效。与session对象相比，application对象生命周期更长，类似于系统的“全局变量”。</p>
+						<p></p>
+						<h2>5、out 对象</h2>
+						<p>out 对象用于在Web浏览器内输出信息，并且管理应用服务器上的输出缓冲区。在使用 out 对象输出数据时，可以对数据缓冲区进行操作，及时清除缓冲区中的残余数据，为其他的输出让出缓冲空间。待数据输出完毕后，要及时关闭输出流。/p>
+						<p></p>
+						<h2>6、pageContext 对象</h2>
+						<p>pageContext 对象的作用是取得任何范围的参数，通过它可以获取 JSP页面的out、request、reponse、session、application 等对象。pageContext对象的创建和初始化都是由容器来完成的，在JSP页面中可以直接使用 pageContext对象。</p>
+						<p></p>
+						<h2>7、config 对象</h2>
+						<p>config 对象的主要作用是取得服务器的配置信息。通过 pageConext对象的 getServletConfig() 方法可以获取一个config对象。当一个Servlet 初始化时，容器把某些信息通过config对象传递给这个 Servlet。 开发者可以在web.xml 文件中为应用程序环境中的Servlet程序和JSP页面提供初始化参数。</p>
+						<p></p>
+						<h2>8、page 对象</h2>
+						<p>page 对象代表JSP本身，只有在JSP页面内才是合法的。 page隐含对象本质上包含当前 Servlet接口引用的变量，类似于Java编程中的 this 指针。</p>
+						<p></p>
+						<h2>9、exception 对象</h2>
+						<p>exception 对象的作用是显示异常信息，只有在包含 isErrorPage="true" 的页面中才可以被使用，在一般的JSP页面中使用该对象将无法编译JSP文件。excepation对象和Java的所有对象一样，都具有系统提供的继承结构。exception 对象几乎定义了所有异常情况。在Java程序中，可以使用try/catch关键字来处理异常情况； 如果在JSP页面中出现没有捕获到的异常，就会生成 exception 对象，并把 exception 对象传送到在page指令中设定的错误页面中，然后在错误页面中处理相应的 exception 对象。</p>
+
+
+						<pre><code class="language-css">p { color: red }</code></pre>
+						
+					</div>
+
+					<!-- 标签 -->
+					<div class="m-padded-lr-responsive">
+						<div class="ui basic teal label">
+							Java基础
+						</div>
+					</div>
+					<!-- 赞赏 -->
+					<div class="ui center aligned basic segment">
+						<button id="payButton" class="ui orange basic circular button">赞赏</button>
+					</div>
+					<div class="ui payQR flowing popup transition hidden">
+						<div class="ui orange basic label">
+							<div class="ui images" style="font-size: inherit !important;">
+								<div class="image">
+									<img src="../static/img/alipay.jpg" class="ui rounded bordered image" style="width: 120px;" />
+									<div class="">支付宝</div>
+								</div>
+								<div class="image">
+									<img src="../static/img/wechatpay.jpg" class="ui rounded bordered image" style="width: 120px;" />
+									<div class="">微信</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui attached positive message">
+					<!--博客信息-->
+					<div class="ui moddle aligned grid">
+						<div class="eleven wide column">
+							<ul class="list">
+								<li>作者：石登辉（联系作者）</li>
+								<li>发表时间：2019-11-21 20:18</li>
+								<li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+								<li>公众号转载：请在文末添加作者公众号二维码</li>
+							</ul>
+						</div>
+						<div class="five wide column">
+							<img src="../static/img/wechat.jpg" class="ui right floated rounded bordered image" style="width: 110px;" />
+						</div>
+					</div>
+				</div>
+				<div id="comment-container" class="ui bottom attached segment">
+					<!--留言区域列表-->
+					<div class="ui teal segment">
+						<div class="ui threaded comments">
+							<h3 class="ui dividing header">评论</h3>
+							<div class="comment">
+								<a class="avatar">
+									<img src="https://picsum.photos/id/1011/100/100">
+								</a>
+								<div class="content">
+									<a class="author">Matt</a>
+									<div class="metadata">
+										<span class="date">Today at 5:42PM</span>
+									</div>
+									<div class="text">
+										How artistic!
+									</div>
+									<div class="actions">
+										<a class="reply">回复</a>
+									</div>
+								</div>
+							</div>
+							<div class="comment">
+								<a class="avatar">
+									<img src="https://picsum.photos/id/1020/100/100">
+								</a>
+								<div class="content">
+									<a class="author">Elliot Fu</a>
+									<div class="metadata">
+										<span class="date">Yesterday at 12:30AM</span>
+									</div>
+									<div class="text">
+										<p>This has been very useful for my research. Thanks as well!</p>
+									</div>
+									<div class="actions">
+										<a class="reply">回复</a>
+									</div>
+								</div>
+								<div class="comments">
+									<div class="comment">
+										<a class="avatar">
+											<img src="../static/img/icon_1.jpg">
+										</a>
+										<div class="content">
+											<a class="author">Jenny Hess</a>
+											<div class="metadata">
+												<span class="date">Just now</span>
+											</div>
+											<div class="text">
+												Elliot you are always so right :)
+											</div>
+											<div class="actions">
+												<a class="reply">回复</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="comment">
+								<a class="avatar">
+									<img src="https://picsum.photos/id/1006/100/100">
+								</a>
+								<div class="content">
+									<a class="author">Joe Henderson</a>
+									<div class="metadata">
+										<span class="date">5 days ago</span>
+									</div>
+									<div class="text">
+										Dude, this is awesome. Thanks so much
+									</div>
+									<div class="actions">
+										<a class="reply">回复</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--提交留言区域-->
+					<div class="ui form">
+						<div class="field">
+							<textarea name="content" placeholder="请输入评论信息...."></textarea>
+						</div>
+						<div class="fields">
+							<div class="field m-mobile-wide m-margin-bottom-small">
+								<div class="ui left icon input">
+									<i class="user icon"></i>
+									<input type="text" name="nickname" placeholder="姓名"/>
+								</div>
+							</div>
+							<div class="field m-mobile-wide m-margin-bottom-small">
+								<div class="ui left icon input">
+									<i class="mail icon"></i>
+									<input type="email" name="email" placeholder="邮箱"/>
+								</div>
+							</div>
+							<div class="field m-mobile-wide m-margin-bottom-small">
+								<button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-padded m-fixed m-right-bottom">
+			<div class="ui vertical icon buttons">
+				<button type="button" class="ui toc teal button">目录</button>
+				<a href="#comment-container" class="ui teal button">留言</a>
+				<button class="ui icon button"><i class="weixin icon"></i></button>
+				<a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
+			</div>
+		</div>
+		
+		<div class="ui toc-container flowing popup transition hidden" style="width: 250px !important;">
+			生成的目录
+			<ol class="js-toc">
+				
+			</ol>
+		</div>
+		
+		
+		<br />
+		<br />
+		<br />
+		<!-- 底部footer -->
+		<footer class="ui inverted vertical segment m-padded-tb-massive">
+			<div class="ui center aligned container">
+				<div class="ui inverted divided stackable grid">
+					<div class="three wide column">
+						<div class="ui inverted link list">
+							<div class="item">
+								<img src="../static/img/wechat.jpg" class="ui rounded image" style="width: 110px;" />
+							</div>
+						</div>
+
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">用户故事（User Story）</a>
+							<a href="#" class="item">用户故事（User Story）</a>
+							<a href="#" class="item">用户故事（User Story）</a>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">Email：shidenghui@aliyun.com</a>
+							<a href="#" class="item">QQ：1059133033</a>
+						</div>
+					</div>
+					<div class="seven wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">BLOG</h4>
+						<p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+					</div>
+				</div>
+				<div class="ui inverted section divider"></div>
+				<!-- 分割线 -->
+				<p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Blog Designed by Shidenghui</p>
+			</div>
+		</footer>
+
+		<script>
+			$('.menu.toggle').click(function() {
+				$('.m-item').toggleClass('m-mobile-hide');
+			});
+			/**/
+			$('#payButton').popup({
+				popup: $('.payQR.popup'),
+				/*获取组件*/
+				on: 'click',
+				/*触发条件*/
+				position: 'bottom center' /*出现结果位置*/
+			});
+			/*产生目录*/
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.js-toc-content',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				// For headings inside relative or absolute positioned containers within content.
+				hasInnerContainers: true,
+			});
+			$('.toc.button').popup({
+				popup: $('.toc-container.popup'),
+				/*获取组件*/
+				on: 'click',
+				/*触发条件*/
+				position: 'left center' /*出现结果位置*/
+			});
+		</script>
+	</body>
+
+</html>

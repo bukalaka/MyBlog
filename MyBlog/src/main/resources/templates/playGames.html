@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<link rel="stylesheet" href="../static/dist/semantic.css" />
+		<link rel="stylesheet" href="../static/dist/components/reset.css">
+		<link rel="stylesheet" type="text/css" href="../static/dist/components/reset.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/site.css">
+	
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/container.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/grid.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/header.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/image.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/menu.css">
+	
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/divider.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/segment.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/form.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/input.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/button.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/list.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/message.css">
+	  	<link rel="stylesheet" type="text/css" href="../static/dist/components/icon.css">
+		<link rel="stylesheet" href="../static/css/me.css" />
+		
+		<script src="../static/js/jquery-3.4.1.min.js"></script>
+		<script src="../static/dist/semantic.js"></script>
+		<script src="../static/dist/components/form.js"></script>
+		<script src="../static/dist/components/transition.js"></script>
+	</head>
+	<body>
+		<!-- 导航 -->
+		<nav class="ui inverted attached segment m-padded-tb-mini">
+			<div class="ui container">
+				<div class="ui inverted secondary stackable menu">
+					<h2 class="ui teal header item">Blog</h2>
+					<a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini clone icon"></i>归档</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
+					<div class="right m-item item  m-mobile-hide">
+						<div class="ui icon input"><!-- transparent inverted -->
+							<input type="text" placeholder="Search...." />
+							<i class="search link icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+				<i class="sidebar icon"></i>
+			</a>
+		</nav>
+		
+		<!-- 中间内容 -->
+		<div class="m-contauner m-padded-tb-large">
+			<iframe src="http://s5.4399.com/4399swf//upload_swf//ftp26/csya/20181017/4/gameIndex.html" width="800px" height="484px"></iframe>
+		</div>
+		
+		<!-- 底部footer -->
+		<footer class="ui inverted vertical segment m-padded-tb-massive">
+			<div class="ui center aligned container">
+				<div class="ui inverted divided stackable grid">
+					<div class="three wide column">
+						<div class="ui inverted link list">
+							<div class="item">
+								<img src="../static/img/wechat.jpg" class="ui rounded image" style="width: 110px;"/>
+							</div>
+						</div>
+						
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">用户故事（User Story）</a>
+							<a href="#" class="item">用户故事（User Story）</a>
+							<a href="#" class="item">用户故事（User Story）</a>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">Email：shidenghui@aliyun.com</a>
+							<a href="#" class="item">QQ：1059133033</a>
+						</div>
+					</div>
+					<div class="seven wide column">
+						<h4 class="ui inverted header m-text-thin m-text-spaced">BLOG</h4>
+						<p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+					</div>
+				</div>
+				<div class="ui inverted section divider"></div><!-- 分割线 -->
+				 <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Blog Designed by Shidenghui</p>
+			</div>
+		</footer>
+		
+	
+	<script>
+		$('.menu.toggle').click(function(){
+			$('.m-item').toggleClass('m-mobile-hide');
+		})
+	</script>
+	</body>
+</html>
